@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Bootstrap Icons CDN -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="./Css/styles.css" />
+  <!-- <link rel="stylesheet" href="./Css/styles.css" /> -->
 </head>
 
 <body>
@@ -71,28 +70,28 @@
             <!-- Left: Tabs, Sliders, Result -->
             <div class="col-md-6 d-flex flex-column justify-content-between" style="min-height: 400px">
               <div>
-                <ul class="nav nav-tabs mb-4" id="calcTab" role="tablist">
-                  <li class="nav-item" role="presentation">
+                <ul class="nav nav-tabs mb-4" id="calcTab">
+                  <li class="nav-item">
                     <button class="nav-link active" id="sip-tab" data-bs-toggle="tab" data-bs-target="#sip"
-                      type="button" role="tab">
+                      type="button">
                       SIP
                     </button>
                   </li>
-                  <li class="nav-item" role="presentation">
+                  <li class="nav-item">
                     <button class="nav-link" id="lumpsum-tab" data-bs-toggle="tab" data-bs-target="#lumpsum"
-                      type="button" role="tab">
+                      type="button">
                       Lumpsum
                     </button>
                   </li>
                 </ul>
                 <div class="tab-content" id="calcTabContent">
                   <!-- SIP Calculator -->
-                  <div class="tab-pane fade show active" id="sip" role="tabpanel">
+                  <div class="tab-pane fade show active" id="sip">
                     <form id="sip-form">
                       <div class="mb-4">
                         <label class="form-label">Monthly investment</label>
                         <div class="d-flex align-items-center">
-                          <input type="range" class="form-range flex-grow-1" min="500" max="100000" step="500"
+                          <input type="range" class="form-range flex-grow-1" min="500" max="1000000" step="500"
                             id="sip-amount" value="25000" />
                           <span class="ms-3 text-success fw-bold" id="sip-amount-value">₹25,000</span>
                         </div>
@@ -108,7 +107,7 @@
                       <div class="mb-4">
                         <label class="form-label">Time period</label>
                         <div class="d-flex align-items-center">
-                          <input type="range" class="form-range flex-grow-1" min="1" max="30" step="1" id="sip-years"
+                          <input type="range" class="form-range flex-grow-1" min="1" max="40" step="1" id="sip-years"
                             value="10" />
                           <span class="ms-3 text-success fw-bold" id="sip-years-value">10Yr</span>
                         </div>
@@ -116,7 +115,7 @@
                     </form>
                   </div>
                   <!-- Lumpsum Calculator -->
-                  <div class="tab-pane fade" id="lumpsum" role="tabpanel">
+                  <div class="tab-pane fade" id="lumpsum">
                     <form id="lumpsum-form">
                       <div class="mb-4">
                         <label class="form-label">Total investment</label>
@@ -164,7 +163,7 @@
             </div>
             <!-- Right: Chart -->
             <div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
-              <canvas id="resultChart" height="220"></canvas>
+              <canvas id="resultChart"></canvas>
               <button class="btn btn-success px-4 py-2 mt-4" style="min-width: 180px">
                 INVEST NOW
               </button>
@@ -242,7 +241,7 @@
             A SIP plan calculator works on the following formula -
           </p>
           <p class="text-secondary" style="font-size: 1.05rem">
-            M = P × ({[1 + i]^n – 1} / i) × (1 + i).
+            M = P x ({[1 + i]^n - 1} / i) x (1 + i).
           </p>
           <p class="text-secondary" style="font-size: 1.05rem">
             In the above formula -
@@ -261,7 +260,7 @@
             then the monthly rate of return will be 12%/12 = 1/100=0.01
           </p>
           <p class="text-secondary" style="font-size: 1.05rem">
-            Hence, M = 1,000X ({[1 +0.01 ]^{12} – 1} / 0.01) x (1 + 0.01)
+            Hence, M = 1,000X ({[1 +0.01 ]^{12} - 1} / 0.01) x (1 + 0.01)
           </p>
           <p class="text-secondary" style="font-size: 1.05rem">
             which gives Rs 12,809 Rs approximately in a year.
@@ -293,7 +292,7 @@
           </h4>
           <p class="text-secondary" style="font-size: 1.05rem">
             Groww offers the best SIP calculator, which provides the following
-            advantages –
+            advantages -
           </p>
           <ul>
             <li>Plan your investment based on the amount and tenure.</li>
@@ -311,10 +310,131 @@
             portfolio is as per your requirements and financial needs.
           </p>
         </div>
+        <div class="mt-5">
+          <h2 class="fw-bold" style="font-size: 1.3rem">
+            FAQs
+          </h2>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  How much can I invest in a SIP?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">There is no limit to the amount you can invest in a SIP. The minimum amount
+                  that you can invest is Rs. 500 per month.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  What is the maximum tenure of a SIP?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">There is no maximum tenure of a SIP. You can invest as long as you can. The
+                  minimum tenure you can go for is 3 years.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Are SIPs similar to mutual funds?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">People often tend to think of SIP as either mutual funds or different than a
+                  mutual fund. The fact is that SIP is just a style of investment and not a fund/scheme or a
+                  stock/investment avenue. It is an investment vehicle to invest periodically in a fund/scheme of your
+                  choice.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Can I modify my SIP amount?
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, you can anytime check your returns with SIP investment calculator and
+                  increase or decrease the SIP amount
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Do SIP allows only equity mutual funds investment?
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">No, you can invest in debt and hybrid mutual funds through SIP.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Are SIPs similar to mutual funds?
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Different types of SIPs are available in the market like -
+                  <ul>
+                    <li>Step-up or top-up SIP: A step-up or top-up SIP enables you to increase the investment amount
+                      automatically at specified intervals at a particular amount or percentage.</li>
+                    <li>Perpetual SIP: A perpetual SIP enables you to keep investing as long as you wish to without any
+                      end date.</li>
+                    <li>Trigger SIP: A trigger SIP lets you start investing during a specific index level, NAV, date, or
+                      event.</li>
+                    <p>Flexible SIP: A flexible SIP lets you change the amount you are investing in according to your
+                      preference.</p>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Can i renew a SIP?
+                </button>
+              </h2>
+              <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, you can renew a SIP automatically. Companies also give you the option
+                  to cancel this auto-renew feature.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Can i pause my investments in SIP?
+                </button>
+              </h2>
+              <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, mutual fund companies also provide the option of pausing your SIP
+                  investments up for a specified period.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Sidebar Section -->
-      <div class="col-lg-4">
+      <div class="col-lg-4 ">
         <div class="card mb-4 p-4 text-center">
           <img src="./Assets/Images/Start_Investing" alt="wealth" style="width: 130px; margin: auto" />
           <h5 class="mt-3 mb-2 fw-bold">Build Wealth, One SIP at a Time</h5>
@@ -324,33 +444,642 @@
           </p>
           <button class="btn btn-success w-100">START SIP WITH ₹500</button>
         </div>
-        <div class="card p-3">
-          <h6 class="fw-bold mb-3">Popular Calculators</h6>
+        <div class="card">
+          <h6 class="fw-bold px-3 pt-2">Popular Calculators</h6>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <a href="#">Lumpsum Calculator</a>
+            <li class="list-group-item ">
+              <a href="#" class="text-decoration-none">Lumpsum Calculator</a>
             </li>
-            <li class="list-group-item"><a href="#">SWP Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">SWP Calculator</a></li>
             <li class="list-group-item">
-              <a href="#">Mutual Fund Returns Calculator</a>
-            </li>
-            <li class="list-group-item">
-              <a href="#">Sukanya Samriddhi Yojana Calculator</a>
+              <a href="#" class="text-decoration-none">Mutual Fund Returns Calculator</a>
             </li>
             <li class="list-group-item">
-              <a href="#">Income Tax Calculator</a>
+              <a href="#" class="text-decoration-none">Sukanya Samriddhi Yojana Calculator</a>
             </li>
-            <li class="list-group-item"><a href="#">PPF Calculator</a></li>
-            <li class="list-group-item"><a href="#">EPF Calculator</a></li>
-            <li class="list-group-item"><a href="#">FD Calculator</a></li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">Income Tax Calculator</a>
+            </li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">PPF Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">EPF Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">FD Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">RD Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">EMI Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">GST Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">XIRR Calculator</a></li>
+          </ul>
+        </div>
+        <div class="mt-3 card">
+          <h6 class="fw-bold px-3 pt-2">Mutual Fund Calculators</h6>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item ">
+              <a href="#" class="text-decoration-none">ELSS Calculator</a>
+            </li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">SBI SIP Calculator</a></li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">HDFC SIP Calculator</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">ICICI SIP Calculator</a>
+            </li>
+            <li class="list-group-item">
+              <a href="#" class="text-decoration-none">Axis Bank SIP Calculator</a>
+            </li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Kotak Bank SIP Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">Nippon India SIP Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">LIC SIP Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">IDBI SIP Calculator</a></li>
+            <li class="list-group-item"><a href="#" class="text-decoration-none">PNB SIP Calculator</a></li>
           </ul>
         </div>
       </div>
     </div>
   </main>
   <!-- Main End  -->
+  <!-- Footer Start  -->
+  <footer class="bg-light pt-4 pb-0 border-top mt-5">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="small mb-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-1">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Calculators</a></li>
+          <li class="breadcrumb-item active" aria-current="page">SIP Calculator</li>
+        </ol>
+      </nav>
+      <!-- Top Row: Logo, Address, Social, Links -->
+      <div class="row gy-4 justify-content-between">
+        <div class="col-lg-4">
+          <img src="./Assets/Images/groww_logo.961dcfc1.webp" alt="Groww Logo" style="height:32px;">
+          <address class="mt-3 mb-1 text-secondary small">
+            Vaishnavi Tech Park, South Tower, 3rd Floor<br>
+            Sarjapur Main Road, Bellandur, Bengaluru - 560103<br>
+            Karnataka
+          </address>
+          <a href="#" class="d-block mb-2 small">Contact Us</a>
+          <div class="mb-3">
+            <a href="#" class="me-2 text-dark"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-2 text-dark"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-2 text-dark"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="me-2 text-dark"><i class="bi bi-youtube"></i></a>
+          </div>
+          <div class="text-secondary small mb-2">&copy; 2016-2025 Groww. All rights reserved.</div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="fw-bold mb-2">GROWW</div>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-secondary">About Us</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Pricing</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Blog</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Media & Press</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Careers</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Help & Support</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Trust & Safety</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <div class="fw-bold mb-2">PRODUCTS</div>
+          <ul class="list-unstyled small">
+            <li><a href="#" class="text-decoration-none text-secondary">Stocks</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">F&O</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">MTF</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">ETF</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">IPO</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Credit</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Mutual Funds</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Groww Terminal</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Stocks Screener</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Algo Trading</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Commodities</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Groww Digest</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Demat Account</a></li>
+            <li><a href="#" class="text-decoration-none text-secondary">Groww AMC</a></li>
+          </ul>
+          <div class="small text-secondary mt-2">Version: 6.3.7</div>
+        </div>
+        <!-- Add more columns as needed for Share Market, Indices, etc. -->
+      </div>
+      <!-- Divider -->
+      <hr class="my-4">
+      <!-- Tabbed Links -->
+      <div class="row">
+        <div class="col-12">
+          <ul class="nav nav-tabs border-0 mb-2" id="footerTab">
+            <li class="nav-item">
+              <button class="nav-link active border-0 border-bottom border-dark" id="share-tab" data-bs-toggle="tab"
+                data-bs-target="#share" type="button">Share Market</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="indices-tab" data-bs-toggle="tab" data-bs-target="#indices"
+                type="button">Indices</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="fno-tab" data-bs-toggle="tab" data-bs-target="#fno"
+                type="button">F&O</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="mf-tab" data-bs-toggle="tab" data-bs-target="#mf"
+                type="button">Mutual Funds</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="funds-tab" data-bs-toggle="tab" data-bs-target="#funds"
+                type="button">Funds By Groww</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="calc-tab" data-bs-toggle="tab" data-bs-target="#calc"
+                type="button">Calculators</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="ipo-tab" data-bs-toggle="tab" data-bs-target="#ipo"
+                type="button">IPO</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link border-0" id="misc-tab" data-bs-toggle="tab" data-bs-target="#misc"
+                type="button">Miscellaneous</button>
+            </li>
+          </ul>
+          <div class="tab-content small" id="footerTabContent">
+            <div class="tab-pane fade show active" id="share">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="indices">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="fno">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="mf">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="funds">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="calc">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="ipo">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+            <div class="tab-pane fade show" id="misc">
+              <div class="row">
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Gainers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks High Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none text-success">Tata Motors</a></li>
+                    <li><a href="#" class="text-decoration-none">NHPC</a></li>
+                    <li><a href="#" class="text-decoration-none">ITC</a></li>
+                    <li><a href="#" class="text-decoration-none">Wipro</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Top Losers Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">52 Weeks Low Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">IREDA</a></li>
+                    <li><a href="#" class="text-decoration-none">State Bank of India</a></li>
+                    <li><a href="#" class="text-decoration-none">Adani Power</a></li>
+                    <li><a href="#" class="text-decoration-none">CDSL</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Most Traded Stocks</a></li>
+                    <li><a href="#" class="text-decoration-none">Stocks Market Calender</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Steel</a></li>
+                    <li><a href="#" class="text-decoration-none">Tata Power</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Heavy Electricals</a></li>
+                    <li><a href="#" class="text-decoration-none">Indian Oil Corporation</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">Stocks Feed</a></li>
+                    <li><a href="#" class="text-decoration-none">Suzlon Energy</a></li>
+                    <li><a href="#" class="text-decoration-none">Zomato (Eternal)</a></li>
+                    <li><a href="#" class="text-decoration-none">Yes Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Infosys</a></li>
+                    <li><a href="#" class="text-decoration-none">NBCC</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="text-decoration-none">FII DII Activity</a></li>
+                    <li><a href="#" class="text-decoration-none">IRFC</a></li>
+                    <li><a href="#" class="text-decoration-none">Bharat Electronics</a></li>
+                    <li><a href="#" class="text-decoration-none">HDFC Bank</a></li>
+                    <li><a href="#" class="text-decoration-none">Vedanta</a></li>
+                    <li><a href="#" class="text-decoration-none">Reliance Power</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center mt-2">
+                <a href="#" class="small text-decoration-none text-dark">Show More <i
+                    class="bi bi-chevron-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 small text-secondary text-center">
+          Others: NSE | BSE | Terms and Conditions | Policies and Procedures | Regulatory & Other Info | Privacy Policy
+          | Disclosure | SMART ODR | Download Forms
+          <br>
+          Information Security Practices | Investor Charter and Grievance | Bug Bounty
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End  -->
+  <!-- Chart.js CDN  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./Js/script.js"></script>
 </body>
-
 </html>
