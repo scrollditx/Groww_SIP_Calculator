@@ -28,7 +28,7 @@ let lumpAmountValue = document.getElementById("");
 let lumpRateValue = document.getElementById("");
 let lumpYearsValue = document.getElementById("");
 
-// Chart Section
+// Chart Section Start
 
 var ctx = document.getElementById("resultChart").getContext("2d");
 var resultChart = new Chart(ctx, {
@@ -51,3 +51,4 @@ var resultChart = new Chart(ctx, {
     },
   },
 });
+// Chart Section Over
